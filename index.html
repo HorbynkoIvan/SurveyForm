@@ -10,9 +10,62 @@
     <p class="description">Do you go in for sport!?
         We want to know how we can improve the sports infrastructure in our region?</p>
     <form action="" id="survey-form">
-        <label for="name">Name:</label>
-        <input type="text" name="name" id="name">
-
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" placeholder="name">
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="email">
+        </div>
+        <div>
+            <label for="number">Age:</label>
+            <input type="number" name="age" id="number" placeholder="age">
+        </div>
+        <div>
+            <label for="dropdown">Which option best describes your life style?</label>
+            <select name="" id="dropdown">
+                <option disabled selected>Select an option</option>
+                <option value="student">Student</option>
+                <option value="worker">Full Time Worker</option>
+                <option value="pensioner">Pensioner</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div>
+            <label>How many times in week do you go in for sport?</label>
+            <ul>
+                <li><label>3 times<input type="radio" value="3" name="radio-btn"></label></li>
+                <li><label>4 times<input type="radio" value="4" name="radio-btn"></label></li>
+                <li><label>5 times<input type="radio" value="5" name="radio-btn"></label></li>
+                <li><label>other<input type="radio" value="other" name="radio-btn"></label></li>
+                <li><label>don't train<input type="radio" value="not" name="radio-btn"></label></li>
+            </ul>
+        </div>
+        <div>
+            <label>What sports do you do? <br/>(Check all that apply)</label>
+            <ul>
+                <li><label>Bicycling<input type="checkbox" value="1" name="radio-btn"></label></li>
+                <li><label>Boxing<input type="checkbox" value="2" name="radio-btn"></label></li>
+                <li><label>Running<input type="checkbox" value="3" name="radio-btn"></label></li>
+                <li><label>Street workout<input type="checkbox" value="4" name="radio-btn"></label></li>
+                <li><label>GYM<input type="checkbox" value="4" name="radio-btn"></label></li>
+            </ul>
+        </div>
+        <div>
+            <label for="email">Any Comments or Suggestions:</label>
+            <textarea name="comment" id="comments" cols="30" rows="3"
+                      placeholder="Enter your comment here..."></textarea>
+        </div>
+        <div>
+            <label>Does the sports infrastructure in your area satisfy you?</label>
+            <ul>
+                <li><label>YES<input type="radio" value="1" name="radio-btn"></label></li>
+                <li><label>No<input type="radio" value="2" name="radio-btn"></label></li>
+                <li><label>It could be!<input type="radio" value="3" name="radio-btn"></label></li>
+            </ul>
+        </div>
+        <button type="submit">Submit</button>
     </form>
 </div>
 </body>
