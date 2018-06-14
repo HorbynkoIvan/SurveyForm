@@ -12,29 +12,45 @@
         <p class="description">Do you go in for sport!?
             We want to know how we can improve the sports infrastructure in our region?</p>
         <form action="" id="survey-form">
-            <div>
-                <label for="name">Name:</label>
-                <input type="text" name="name" id="name" placeholder="name">
+            <div class="block">
+                <div class="block_left">
+                    <label for="name">*Name:</label>
+                </div>
+                <div class="block_right">
+                    <input class='input-field' type="text" name="name" id="name"
+                           placeholder="Enter your name">
+                </div>
             </div>
-            <div>
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email" placeholder="email">
+            <div class="block">
+                <div class="block_left">
+                    <label for="email">*Email:</label>
+                    <div class="block_right">
+                        <input class='input-field' type="email" name="email" id="email"
+                               placeholder="Enter your Email">
+                    </div>
+                </div>
             </div>
-            <div>
-                <label for="number">Age:</label>
-                <input type="number" name="age" id="number" placeholder="age">
+            <div class="block">
+                <div class="block_left">
+                    <label for="number">*Age:</label>
+                    <div class="block_right">
+                        <input class='input-field' type="number" name="age" id="number" placeholder="age">
+                    </div>
+                </div>
             </div>
-            <div>
+            <div class="block">
                 <label for="dropdown">Which option best describes your life style?</label>
-                <select name="" id="dropdown">
-                    <option disabled selected>Select an option</option>
-                    <option value="student">Student</option>
-                    <option value="worker">Full Time Worker</option>
-                    <option value="pensioner">Pensioner</option>
-                    <option value="other">Other</option>
-                </select>
+                <div class="block_right">
+                    <select name="" id="dropdown">
+                        <option disabled selected>Select an option</option>
+                        <option value="student">Student</option>
+                        <option value="worker">Full Time Worker</option>
+                        <option value="pensioner">Pensioner</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
             </div>
-            <div>
+            <div class="block">
                 <label>How many times in week do you go in for sport?</label>
                 <ul>
                     <li><label>3 times<input type="radio" value="3" name="radio-btn"></label></li>
