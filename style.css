@@ -10,23 +10,26 @@
 
 .wrapper {
     width: 100%;
-    /*    height: 100vh;*/
-    background-color: #e0e0e0;
+    height: 100%;
+    background-color: #2ba8db;
     text-align: center;
-    min-width: 320px;
+    /*min-width: 320px;*/
 }
 
 #title {
     text-align: center;
     font-size: 2em;
     font-weight: bold;
+    padding: 20px 0 0 0;
 }
 
 #form-outer {
     width: 80%;
-    background-color: #6d4c41;
+    background-color: #424242;
     padding: 1em 0;
-    margin: 0 auto;
+    margin: 20px auto;
+    border-radius: 5px;
+    color:#fcae26;
 }
 
 .description {
@@ -70,3 +73,105 @@ label {
 .block_left_radio{
     vertical-align: top;
 }
+textarea.input_field{
+    margin: 0 10px;
+}
+/*start style button*/
+.button{
+    position: relative;
+    width:220px;
+    height:40px;
+    text-align:center;
+    color:#FFF;
+    text-decoration:none;
+    line-height:43px;
+    font-family:'Oswald', Helvetica;
+    /*display: block;*/
+    margin: 30px;
+}
+.push_button:before {
+    background-color: #f04d5b;
+    background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#c93cd0), to(#f05a88));
+
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+
+    -webkit-box-shadow:0 1px 2px rgba(0, 0, 0, .5) inset, 0 1px 0 #FFF;
+    -moz-box-shadow:0 1px 2px rgba(0, 0, 0, .5) inset, 0 1px 0 #FFF;
+    box-shadow:0 1px 2px rgba(0, 0, 0, .5) inset, 0 1px 0 #FFF;
+
+    position: absolute;
+    content: "";
+    left: -6px; right: -6px;
+    top: -6px; bottom: -10px;
+    z-index: -1;
+}
+
+.push_button:active {
+    -webkit-box-shadow:0 1px 0 rgba(255, 255, 255, .5) inset, 0 -1px 0 rgba(255, 255, 255, .1) inset;
+    top:5px;
+}
+.push_button:active:before{
+    top: -11px;
+    bottom: -5px;
+    content: "";
+}
+
+.red {
+    text-shadow:-1px -1px 0 #A84155;
+    background: #D25068;
+    border:1px solid #D25068;
+
+    background-image:-webkit-linear-gradient(top, #F66C7B, #D25068);
+    background-image:-moz-linear-gradient(top, #F66C7B, #D25068);
+    background-image:-ms-linear-gradient(top, #F66C7B, #D25068);
+    background-image:-o-linear-gradient(top, #F66C7B, #D25068);
+    background-image:linear-gradient(to bottom, #F66C7B, #D25068);
+
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+
+    -webkit-box-shadow:0 1px 0 rgba(255, 255, 255, .5) inset, 0 -1px 0 rgba(255, 255, 255, .1) inset, 0 4px 0 #AD4257, 0 4px 2px rgba(0, 0, 0, .5);
+    -moz-box-shadow:0 1px 0 rgba(255, 255, 255, .5) inset, 0 -1px 0 rgba(255, 255, 255, .1) inset, 0 4px 0 #AD4257, 0 4px 2px rgba(0, 0, 0, .5);
+    box-shadow:0 1px 0 rgba(255, 255, 255, .5) inset, 0 -1px 0 rgba(255, 255, 255, .1) inset, 0 4px 0 #AD4257, 0 4px 2px rgba(0, 0, 0, .5);
+}
+
+.red:hover {
+    background: #F66C7B;
+    background-image:-webkit-linear-gradient(top, #D25068, #F66C7B);
+    background-image:-moz-linear-gradient(top, #D25068, #F66C7B);
+    background-image:-ms-linear-gradient(top, #D25068, #F66C7B);
+    background-image:-o-linear-gradient(top, #D25068, #F66C7B);
+    background-image:linear-gradient(top, #D25068, #F66C7B);
+}
+
+.blue {
+    text-shadow:-1px -1px 0 #2C7982;
+    background: #2ba8db;
+    border:1px solid #379AA4;
+    background-image:-webkit-linear-gradient(top, #48C6D4, #2ba8db);
+    background-image:-moz-linear-gradient(top, #48C6D4, #2ba8db);
+    background-image:-ms-linear-gradient(top, #48C6D4, #2ba8db);
+    background-image:-o-linear-gradient(top, #48C6D4, #2ba8db);
+    background-image:linear-gradient(top, #48C6D4, #2ba8db);
+
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+
+    -webkit-box-shadow:0 1px 0 rgba(255, 255, 255, .5) inset, 0 -1px 0 rgba(255, 255, 255, .1) inset, 0 4px 0 #338A94, 0 4px 2px rgba(0, 0, 0, .5);
+    -moz-box-shadow:0 1px 0 rgba(255, 255, 255, .5) inset, 0 -1px 0 rgba(255, 255, 255, .1) inset, 0 4px 0 #338A94, 0 4px 2px rgba(0, 0, 0, .5);
+    box-shadow:0 1px 0 rgba(255, 255, 255, .5) inset, 0 -1px 0 rgba(255, 255, 255, .1) inset, 0 4px 0 #338A94, 0 4px 2px rgba(0, 0, 0, .5);
+}
+
+.blue:hover {
+    background: #48C6D4;
+    background-image:-webkit-linear-gradient(top, #2ba8db, #48C6D4);
+    background-image:-moz-linear-gradient(top, #2ba8db, #48C6D4);
+    background-image:-ms-linear-gradient(top, #2ba8db, #48C6D4);
+    background-image:-o-linear-gradient(top, #2ba8db, #48C6D4);
+    background-image:linear-gradient(top, #2ba8db, #48C6D4);
+}
+/*finish style button*/

@@ -98,20 +98,30 @@
                     <label for="email">Any Comments or Suggestions:</label>
                 </div>
                 <div class="block_right">
-                <textarea class='input-field_radio' name="comment" id="comments" cols="30" rows="3"
+                <textarea class='input_field' name="comment" id="comments" cols="30" rows="3"
                           placeholder="Enter your comment here..."></textarea>
                 </div>
             </div>
 
-            <div>
-                <label>Does the sports infrastructure in your area satisfy you?</label>
-                <ul>
-                    <li><label>YES<input type="radio" value="1" name="radio-btn"></label></li>
-                    <li><label>No<input type="radio" value="2" name="radio-btn"></label></li>
-                    <li><label>It could be!<input type="radio" value="3" name="radio-btn"></label></li>
-                </ul>
+            <div class="block">
+                <div class="block_left block_left_radio">
+                    <label>Does the sports infrastructure in your area satisfy you?</label>
+                </div>
+                <div class="block_right">
+                    <ul class="block_list">
+                        <li>
+                            <label><input class='input-field_radio' type="radio" value="1" name="radio-btn">YES</label>
+                        </li>
+                        <li>
+                            <label><input class='input-field_radio' type="radio" value="2" name="radio-btn">No</label>
+                        </li>
+                        <li>
+                            <label><input class='input-field_radio' type="radio" value="3" name="radio-btn">It could be!</label>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <button type="submit">Submit</button>
+            <button class='button blue' type="submit">Submit</button>
         </form>
     </div>
 </div>
