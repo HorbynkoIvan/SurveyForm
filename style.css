@@ -68,8 +68,5 @@ label {
     margin: 5px 10px;
 }
 .block_left_radio{
-    display: inline-block;
-    width: 40%;
-    text-align: right;
     vertical-align: top;
 }
