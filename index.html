@@ -17,31 +17,33 @@
                     <label for="name">*Name:</label>
                 </div>
                 <div class="block_right">
-                    <input class='input-field' type="text" name="name" id="name"
+                    <input class='input_field' type="text" name="name" id="name"
                            placeholder="Enter your name">
                 </div>
             </div>
             <div class="block">
                 <div class="block_left">
                     <label for="email">*Email:</label>
-                    <div class="block_right">
-                        <input class='input-field' type="email" name="email" id="email"
-                               placeholder="Enter your Email">
-                    </div>
+                </div>
+                <div class="block_right">
+                    <input class='input_field' type="email" name="email" id="email"
+                           placeholder="Enter your Email">
                 </div>
             </div>
             <div class="block">
                 <div class="block_left">
                     <label for="number">*Age:</label>
-                    <div class="block_right">
-                        <input class='input-field' type="number" name="age" id="number" placeholder="age">
-                    </div>
+                </div>
+                <div class="block_right">
+                    <input class='input_field' type="number" name="age" id="number" placeholder="age">
                 </div>
             </div>
             <div class="block">
-                <label for="dropdown">Which option best describes your life style?</label>
+                <div class="block_left">
+                    <label for="dropdown">Which option best describes your life style?</label>
+                </div>
                 <div class="block_right">
-                    <select name="" id="dropdown">
+                    <select name="" id="dropdown" class='input_field'>
                         <option disabled selected>Select an option</option>
                         <option value="student">Student</option>
                         <option value="worker">Full Time Worker</option>
@@ -51,14 +53,18 @@
                 </div>
             </div>
             <div class="block">
-                <label>How many times in week do you go in for sport?</label>
-                <ul>
-                    <li><label>3 times<input type="radio" value="3" name="radio-btn"></label></li>
-                    <li><label>4 times<input type="radio" value="4" name="radio-btn"></label></li>
-                    <li><label>5 times<input type="radio" value="5" name="radio-btn"></label></li>
-                    <li><label>other<input type="radio" value="other" name="radio-btn"></label></li>
-                    <li><label>don't train<input type="radio" value="not" name="radio-btn"></label></li>
-                </ul>
+                <div class="block_left_radio">
+                    <label>How many times in week do you go in for sport?</label>
+                </div>
+                <div class="block_right">
+                    <ul class="block_list">
+                        <li><label><input class='input-field_radio' type="radio" value="3" name="radio-btn">3 times</label></li>
+                        <li><label><input class='input-field_radio' type="radio" value="4" name="radio-btn">4 times</label></li>
+                        <li><label><input class='input-field_radio' type="radio" value="5" name="radio-btn">5 times</label></li>
+                        <li><label><input class='input-field_radio' type="radio" value="other" name="radio-btn">other</label></li>
+                        <li><label><input class='input-field_radio' type="radio" value="not" name="radio-btn">don't train</label></li>
+                    </ul>
+                </div>
             </div>
             <div>
                 <label>What sports do you do? <br/>(Check all that apply)</label>

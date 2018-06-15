@@ -35,9 +35,7 @@
 }
 
 .block {
-    background-color: aquamarine;
-  /*  width: 40%;
-    margin: 0 auto;*/
+    margin: 10px 0;
 }
 
 label {
@@ -56,10 +54,22 @@ label {
     width: 48%;
 }
 
-.input-field {
+.input_field {
     width: 75%;
     padding: 5px;
     margin: 10px;
     border: 1px solid rgba(192, 192, 192, 0.54);
     border-radius: 2px;
+}
+.block_list{
+    list-style: none;
+}
+.input-field_radio {
+    margin: 5px 10px;
+}
+.block_left_radio{
+    display: inline-block;
+    width: 40%;
+    text-align: right;
+    vertical-align: top;
 }
