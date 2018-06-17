@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <title>Survey Form</title>
     <link rel="stylesheet" href="style.css">
-    <script src="index.js"></script>
+
+    <script src="test.js"></script>
+
 </head>
 <body>
 <div class="wrapper">
@@ -18,7 +20,7 @@
                     <label id="name-label" for="name">*Name:</label>
                 </div>
                 <div class="block_right">
-                    <input id="name" class='input_field' type="text" name="name"
+                    <input id="name" class='input_field field' type="text" name="name"
                            placeholder="Enter your name" required>
                 </div>
             </div>
@@ -27,7 +29,7 @@
                     <label id="email-label" for="email">*Email:</label>
                 </div>
                 <div class="block_right">
-                    <input id="email" class='input_field' type="email" name="email"
+                    <input id="email" class='input_field field' type="email" name="email"
                            placeholder="Enter your Email" required>
                 </div>
             </div>
@@ -36,7 +38,7 @@
                     <label id="number-label" for="number">*Age:</label>
                 </div>
                 <div class="block_right">
-                    <input id="number" min='0' max='10' class='input_field' type="number" name="age" placeholder="age">
+                    <input id="number" min='16' max='65' class='input_field field' type="number" name="age" placeholder="age">
                 </div>
             </div>
             <div class="block">
@@ -44,7 +46,7 @@
                     <label for="dropdown">Which option best describes your life style?</label>
                 </div>
                 <div class="block_right">
-                    <select name="lifestyle" id="dropdown" class='input_field'>
+                    <select name="lifestyle" id="dropdown" class='input_field field'>
                         <option disabled selected>Select an option</option>
                         <option value="student">Student</option>
                         <option value="worker">Full Time Worker</option>
@@ -99,7 +101,7 @@
                     <label for="email">Any Comments or Suggestions:</label>
                 </div>
                 <div class="block_right">
-                <textarea class='input_field' name="comment" id="comments" cols="30" rows="3"
+                <textarea class='input_field field' name="comment" id="comments" cols="30" rows="3"
                           placeholder="Enter your comment here..."></textarea>
                 </div>
             </div>
@@ -125,7 +127,7 @@
             <button id='submit' class='button blue' type="submit">Submit</button>
         </form>
     </div>
-
+    <script src="index.js"></script>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </div>
 </body>
