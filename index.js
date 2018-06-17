@@ -15,15 +15,24 @@ form.addEventListener('submit', function (event) {
     console.log('age ' + age.value);
     console.log('select ' + select.value);
 
+    /*start radio*/
+    var radios = form.querySelectorAll("input[name='frequency']");
+   /* for ( var k = 0; k < radios.length; i++) {
+        if (radios[k].checked) {
+            return "radio" + radios[k].value;
+        }
+    }*/
+    console.log('radios ' + radios);
+    /*finish radio*/
 
     /*start checkbox*/
     var checked_checkboxes = form.querySelectorAll(
         "input[name='kindofsport']:checked"
     );
     var checkboxes = [];
-    for (var q = 0; q < checked_checkboxes.length; q++) {
-        checkboxes.push(" " + checked_checkboxes[q].value);
-        checked_checkboxes[q].parentElement.style.color = 'red';//change colors of checked elements
+    for (var i = 0; i < checked_checkboxes.length; i++) {
+        checkboxes.push(" " + checked_checkboxes[i].value);
+        checked_checkboxes[i].parentElement.style.color = 'red';//change colors of checked elements
     }
     console.log('checkboxes' + checkboxes)
     /*finish checkbox*/
@@ -31,10 +40,10 @@ form.addEventListener('submit', function (event) {
     console.log('comments ' + comments.value);
 
 
-    var errors = form.querySelectorAll('.error');
+/*    var errors = form.querySelectorAll('.error');
     for (var j = 0; j < errors.length; j++) {
         errors[j].remove();
-    }
+    }*/
 
     /*    for (var i = 0; i < fields.length; i++) {
             if (!fields[i].value) {
