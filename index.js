@@ -5,8 +5,9 @@ var email = form.querySelector('#email');
 var age = form.querySelector('#number');
 var select = form.querySelector('#dropdown');
 var comments = form.querySelector('#comments');
-
-var fields = form.querySelectorAll('.field');
+var checkboxes = [];
+var radio_frequency = '';
+/*var fields = form.querySelectorAll('.field');*/
 
 form.addEventListener('submit', function (event) {
     event.preventDefault();
@@ -17,19 +18,20 @@ form.addEventListener('submit', function (event) {
 
     /*start radio*/
     var radios = form.querySelectorAll("input[name='frequency']");
-   /* for ( var k = 0; k < radios.length; i++) {
+    for ( var k = 0; k < radios.length; k++) {
         if (radios[k].checked) {
-            return "radio" + radios[k].value;
+            radio_frequency = radios[k].value;
+
         }
-    }*/
-    console.log('radios ' + radios);
+    }
+    console.log('radio_frequency ' + radio_frequency);
     /*finish radio*/
 
     /*start checkbox*/
     var checked_checkboxes = form.querySelectorAll(
         "input[name='kindofsport']:checked"
     );
-    var checkboxes = [];
+
     for (var i = 0; i < checked_checkboxes.length; i++) {
         checkboxes.push(" " + checked_checkboxes[i].value);
         checked_checkboxes[i].parentElement.style.color = 'red';//change colors of checked elements
