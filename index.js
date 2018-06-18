@@ -6,7 +6,10 @@ var age = form.querySelector('#number');
 var select = form.querySelector('#dropdown');
 var comments = form.querySelector('#comments');
 var checkboxes = [];
-var radio_frequency = '';
+var radios_freq = form.querySelectorAll("input[name='frequency']")
+var radios_sat = form.querySelectorAll("input[name='satisfaction']");
+var radio_frequency = '';//checked radio for frequency
+var radio_satisfaction = '';//checked radio for satisfaction
 /*var fields = form.querySelectorAll('.field');*/
 
 form.addEventListener('submit', function (event) {
@@ -17,14 +20,16 @@ form.addEventListener('submit', function (event) {
     console.log('select ' + select.value);
 
     /*start radio*/
-    var radios = form.querySelectorAll("input[name='frequency']");
-    for ( var k = 0; k < radios.length; k++) {
-        if (radios[k].checked) {
-            radio_frequency = radios[k].value;
-
+    function checkRadio(radios, result) {
+        for (var i = 0; i < radios.length; i++) {
+            if (radios[i].checked) {
+                result = radios[i].value;
+            }
         }
+        console.log('radio_frequency ' + result);
     }
-    console.log('radio_frequency ' + radio_frequency);
+    checkRadio(radios_freq, radio_frequency);
+    checkRadio(radios_sat, radio_satisfaction);
     /*finish radio*/
 
     /*start checkbox*/
@@ -42,10 +47,10 @@ form.addEventListener('submit', function (event) {
     console.log('comments ' + comments.value);
 
 
-/*    var errors = form.querySelectorAll('.error');
-    for (var j = 0; j < errors.length; j++) {
-        errors[j].remove();
-    }*/
+    /*    var errors = form.querySelectorAll('.error');
+        for (var j = 0; j < errors.length; j++) {
+            errors[j].remove();
+        }*/
 
     /*    for (var i = 0; i < fields.length; i++) {
             if (!fields[i].value) {
