@@ -14,38 +14,29 @@ var radio_satisfaction = '';//checked radio for satisfaction
 
 form.addEventListener('submit', function (event) {
     event.preventDefault();
-    console.log('name ' + yourName.value);
-    console.log('email ' + email.value);
-    console.log('age ' + age.value);
-    console.log('select ' + select.value);
 
     /*start radio*/
-    function checkRadio(radios, result) {
+    function checkRadio(radios) {
         for (var i = 0; i < radios.length; i++) {
             if (radios[i].checked) {
                 result = radios[i].value;
             }
         }
-        console.log('radio_frequency ' + result);
+        return result;
     }
-    checkRadio(radios_freq, radio_frequency);
-    checkRadio(radios_sat, radio_satisfaction);
+
+    radio_frequency = checkRadio(radios_freq);
+    radio_satisfaction = checkRadio(radios_sat);
     /*finish radio*/
 
     /*start checkbox*/
     var checked_checkboxes = form.querySelectorAll(
-        "input[name='kindofsport']:checked"
-    );
-
+        "input[name='kindofsport']:checked");
     for (var i = 0; i < checked_checkboxes.length; i++) {
         checkboxes.push(" " + checked_checkboxes[i].value);
         checked_checkboxes[i].parentElement.style.color = 'red';//change colors of checked elements
     }
-    console.log('checkboxes' + checkboxes)
     /*finish checkbox*/
-
-    console.log('comments ' + comments.value);
-
 
     /*    var errors = form.querySelectorAll('.error');
         for (var j = 0; j < errors.length; j++) {
@@ -62,4 +53,15 @@ form.addEventListener('submit', function (event) {
                 fields[i].parentElement.insertBefore(errore, fields[i]);
             }
         }*/
+    var dataJson = {
+        "yourName": yourName.value,
+        "email": email.value,
+        "age": age.value,
+        "select": select.value,
+        "checkboxes": checkboxes,
+        "radio_frequency": radio_frequency,
+        "radio_satisfaction": radio_satisfaction
+    };
+
+    console.log('dataJson ' + JSON.stringify(dataJson));
 })
